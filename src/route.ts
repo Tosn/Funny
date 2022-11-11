@@ -6,6 +6,10 @@ const router = createRouter({
     {
       path: '/',
       component: () => import('@/views/Index.vue')
+    },
+    {
+      path: '/lottery',
+      component: () => import('@/views/Lottery.vue')
     }
   ]
 })
