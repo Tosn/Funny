@@ -98,7 +98,6 @@ const makeLotteryItem = (type: LotteryType): LotteryRet[] => {
 
   return [prevArr, nextArr]
 }
-let max = 0
 const makeRandomBall = (lottery: AreaItem): LotteryRet => {
   // return lottery.list.sort((a, b) => {
   //   return Math.random() > 0.5 ? (+a) - (+b) : (+b) - (+a)
@@ -108,7 +107,6 @@ const makeRandomBall = (lottery: AreaItem): LotteryRet => {
   const len = _list.length
   while (ret.length < lottery.size) {
     const _random = Math.round(Math.random() * (len - 1))
-    max = max > _random ? max : _random
     if (!ret.includes(_list[_random])) {
       ret.push(_list[_random])
     }
