@@ -61,7 +61,7 @@ type Lottery<T> = Record<LotteryType, LotteryItem<T>>
 const lotteryList:Lottery<AreaItem> = {
   bicolorSphere: {
     before: {
-      list: makeNumberList(33),
+      list: makeNumberList(35),
       size: 5
     },
     after: {
@@ -71,7 +71,7 @@ const lotteryList:Lottery<AreaItem> = {
   },
   lotto: {
     before: {
-      list: makeNumberList(35),
+      list: makeNumberList(33),
       size: 6
     },
     after: {
