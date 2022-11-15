@@ -40,8 +40,8 @@ const makeNumberList = (number: number | string): string[] => {
 
 type LotteryType = 'bicolorSphere' | 'lotto'
 const lotteryOptions = [
-  { label: '双色球', value: 'bicolorSphere' },
-  { label: '大乐透', value:  'lotto'}
+  { label: '大乐透', value: 'bicolorSphere' },
+  { label: '双色球', value:  'lotto'}
 ]
 const lotteryNumber = ref<number>(5)
 const lotteryType = ref<LotteryType>('bicolorSphere');
