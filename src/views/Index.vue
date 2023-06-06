@@ -1,19 +1,20 @@
-import { useListStore } from '../store/modules/list';
 <template>
   <div>
-    <component v-for="comp in listStore.cssList" :is="comp"></component>
+    <ul>
+      <router-link v-for="r in routes" :to="r.path" custom v-slot="{ navigate }">
+        <li :key="r.name" @click="navigate">{{ r?.meta?.name }}</li>
+      </router-link>
+    </ul>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useListStore } from '../store/modules/list'
-const listStore = useListStore()
+import { useRoute, useRouter } from 'vue-router'
 
-
+const router = useRouter()
+const routes = router.options.routes.filter(r => r.meta?.showIndex)
 </script>
 
 <style scoped lang="scss">
-h1 {
-  color: red;
-}
+
 </style>
